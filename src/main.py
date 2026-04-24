@@ -16,24 +16,23 @@ FPS = 60
 TITLE = "QUUIIZZ"
  
 # Audios
-SOUND_CORRECT = "sound_success.mp3"
-SOUND_WRONG = ["sound_failed.mp3", "boom.mp3"]
-SOUND_WIN = ["win.mp3", "win2.mp3"]
+SOUND_CORRECT = "media\sounds\sound_success.mp3"
+SOUND_WRONG = ["media\sounds\sound_failed.mp3", "media\sounds\sound_boom.mp3"]
+SOUND_WIN = ["media\sounds\sound_win.mp3", "media\sounds\sound_win2.mp3"]
 
 SAMPLE_RATE = 44100
 JUMPSCARE_IMAGES_SUCCESS = [
-    "successPic.jpg",  
-    "successPic.jpg",   
-    "successPic.jpg",   
+    "media\images\pic_success.jpg",  
+    "media\images\pic_success.jpg",   
+    "media\images\pic_success.jpg",   
 ]
 JUMPSCARE_IMAGES_FAILED = [
-    "failedPic.jpg",  
-    "failedPic.jpg",   
-    "failedPic.jpg",   
+    "media\images\pic_failed.jpg",  
+    "media\images\pic_failed.jpg",   
+    "media\images\pic_failed.jpg",   
 ]
 JUMPSCARE_IMAGES_WIN = [
-    "win.jpg",
-    "win2.jpg"
+    "media\images\pic_win.jpg"
 ]
 
 JUMPSCARE_DURATION = 1.8   
@@ -48,7 +47,7 @@ QUESTIONS = [
         "correct": 0,
     },
     {
-        "video": "checkpoint2.mp4",
+        "video": "media\videos\checkpoint2.mp4",
         "video_label": "Clip 2",
         "question": "Check point 2\nYou stumble across this one phrase that you never saw before - 水戸まで行かなき (mito made ikanaki)\nafter searching the meaning up, Google tells you it's on of the following. Based on the conversation, which of the following meaning is most likely?",
         "choices": [
@@ -58,7 +57,7 @@ QUESTIONS = [
         "correct": 1,
     },
     {
-        "video": "checkpoint3.mp4",
+        "video": "media\videos\checkpoint3.mp4",
         "video_label": "Clip 3",
         "question": "Wow, they're eating food and it looks great!!! (yum)\nAs they're eating the school lunch noodles, one of them commented…\n絶妙にコシがないし (zetsumyo no koshi ga naishi)\nAccording to him, how are the noodles?",
         "choices": ["They're really spicy.", "They're perfectly al dente with a firm chew", "They're oddly lacking in bite—soft and a bit soggy.", "They're sweet and buttery"],
@@ -655,7 +654,7 @@ class QuizGame:
 
             
             
-            self.jumpscare.trigger(JUMPSCARE_IMAGES_WIN[1])
+            self.jumpscare.trigger(JUMPSCARE_IMAGES_WIN[0])
         else:
             self._load_question()
 
